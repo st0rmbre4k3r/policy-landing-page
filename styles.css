@@ -8,18 +8,28 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #fff;
-  background-color: #0e0e0e;
+  color: black;
+  background-color: white;
 }
 
+/*background: linear-gradient(135deg, #1e1e1e, #3a3a3a);*/ 
 /* Header and Navigation */
+/*align-items: center;*/
 header {
-  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
-  padding: 20px;
+  background: linear-gradient(135deg, #B3A369, #9E8B50);
   position: fixed;
-  top: 0;
   width: 100%;
   z-index: 100;
+  height: 11%;
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
 }
 
 header .container {
@@ -30,10 +40,12 @@ header .container {
   justify-content: space-between;
 }
 
+/*
 .logo {
   font-size: 1.5em;
   font-weight: bold;
-}
+}*/
+
 
 nav ul {
   list-style: none;
@@ -45,7 +57,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: black;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -70,27 +82,39 @@ nav ul li a:hover {
 }
 
 /* Sections */
+
 section {
   padding: 80px 20px;
 }
 
 .section-title {
-  text-align: center;
+  text-align: left;
   font-size: 2.5em;
   margin-bottom: 40px;
+  margin-left: 40px;
 }
+
 /* About Section */
 .about {
-  background: #181818;
-  color: #fff;
-  text-align: center;
+  background: white;
+  color: black;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
 }
 
 .about p {
   font-size: 1.1em;
   line-height: 1.6;
   max-width: 800px;
-  margin: 20px auto;
+  text-align: left;
+}
+
+#about-summary {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: left;
+  margin-left: 40px;
 }
 
 /* Support Ticket Form Styles */
@@ -99,10 +123,11 @@ section {
   /* Left align text for the form and info */
   text-align: left;
   padding: 20px;
+  padding-left: 40px;
 }
 
 .support-ticket-form {
-  background: #1a1a1a;
+  background: white;
   border-radius: 10px;
 }
 
@@ -121,8 +146,9 @@ section {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: none;
+  border-style: solid;
   border-radius: 5px;
+  border-width: 1px;
 }
 
 .support-ticket-form button {
@@ -144,9 +170,9 @@ section {
 
 /* Contact Section */
 .contact {
-  background: #111;
+  background: white;
   text-align: center;
-  color: #fff;
+  color: black;
 }
 
 .contact a {
@@ -166,7 +192,7 @@ section {
 
 /* Footer */
 footer {
-  background: #1e1e1e;
+  background: white;
   padding: 20px;
   text-align: center;
   font-size: 0.9em;
@@ -188,4 +214,11 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.box {
+  border: 4px solid #f76707;
+  border-radius: 5px;
+  margin-left: 40px;
+  margin-top: 30px;
 }
