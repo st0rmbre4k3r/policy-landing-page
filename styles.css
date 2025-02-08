@@ -54,27 +54,6 @@ nav ul li a:hover {
   color: #ff4081;
 }
 
-/* Hero Section */
-.hero {
-  height: 100vh;
-  background: linear-gradient(135deg, #ff4081, #2196f3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
 .cta {
   display: inline-block;
   padding: 15px 30px;
@@ -100,48 +79,6 @@ section {
   font-size: 2.5em;
   margin-bottom: 40px;
 }
-
-/* Features Section */
-.features {
-  background: #111;
-  color: #fff;
-}
-
-.features .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.feature-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.feature {
-  flex: 1 1 300px;
-  margin: 20px;
-  padding: 20px;
-  background: #1a1a1a;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.feature:hover {
-  transform: translateY(-10px);
-}
-
-.feature h3 {
-  margin-bottom: 15px;
-  font-size: 1.5em;
-}
-
-.feature p {
-  font-size: 1em;
-  line-height: 1.5;
-}
-
 /* About Section */
 .about {
   background: #181818;
@@ -154,6 +91,55 @@ section {
   line-height: 1.6;
   max-width: 800px;
   margin: 20px auto;
+}
+
+/* Support Ticket Form Styles */
+.support-ticket-form {
+  flex: 1;
+  /* Left align text for the form and info */
+  text-align: left;
+  padding: 20px;
+}
+
+.support-ticket-form {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+.support-ticket-form h3 {
+  margin-bottom: 15px;
+}
+
+.support-ticket-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.support-ticket-form input,
+.support-ticket-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.support-ticket-form button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: #ff4081;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.support-ticket-form button:hover {
+  background: #e63670;
 }
 
 /* Contact Section */
