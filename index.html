@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GaTech IT Support</title>
+  <title>Critical Security Update</title>
   <!-- Link to external CSS file -->
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header and Navigation -->
   <header>
     <div class="container">
-      <div class="logo">GaTech IT</div>
+      <div class="logo">
+        <img src="georgia_tech_logo.png" alt="Logo" id="georgia-tech-logo">
+        <!--GaTech IT-->
+      </div>
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
@@ -24,9 +30,20 @@
   <!-- About Section -->
   <section class="about" id="about">
     <h2 class="section-title">About GaTech IT</h2>
-    <p>
-      GaTech IT is dedicated to making IT support great again!
+    <p id="about-summary">GaTech IT is dedicated to making IT support great again! From internet connectivity and classroom tech solutions to essential student services, the Office of Information Technology is committed to enriching teaching, learning and research at Georgia Tech. We provide core IT services to students, faculty, and staff which include cyber infrastructure, student registration services, collaboration tools, and digital learning support.
     </p>
+    <div class="box">
+      <h3>Georgia Tech Office of Information Technology (OIT) - Security Advisory</h3>
+      <p><b>Ticket ID: </b>GT-SEC-2025-21298</p>
+      <p><b>Priority: Critical</b></p>
+      <p><b>Reported By: </b>Georgia Tech Cybersecurity Operations Center (CSOC)</p>
+      <p><b>Released: </b>January 15, 2025</p>
+      <p><b>Last Updated: </b>February 9, 2025</p>
+      <p><b>Assigning CNA: Microsoft</b></p>
+      <p><b>MITRE Reference: </b>CVE-2025-21298</p>
+      <p><b>Weakness Reference: </b>CWE-416: Use After Free</p>
+    </div>
+  
   </section>
 
   <section class="support-ticket-form" id="support-ticket-form">
