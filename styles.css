@@ -63,14 +63,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ff4081;
+  color: linear-gradient(135deg, #B3A369, #9E8B50);
 }
 
 .cta {
   display: inline-block;
   padding: 15px 30px;
   background: #fff;
-  color: #ff4081;
+  color: linear-gradient(135deg, #B3A369, #9E8B50);
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
@@ -107,6 +107,7 @@ section {
   line-height: 1.6;
   max-width: 800px;
   text-align: left;
+  margin-left: 10px;
 }
 
 #about-summary {
@@ -132,40 +133,63 @@ section {
 }
 
 .support-ticket-form h3 {
-  margin-bottom: 15px;
+  margin: 0 0 5px 20px;
+  position: relative;
+  top: -70px;
 }
 
 .support-ticket-form label {
   display: block;
-  margin-bottom: 5px;
+  margin: 0 0 5px 20px;
   font-weight: bold;
+  top: -70px;
 }
 
 .support-ticket-form input,
 .support-ticket-form textarea {
-  width: 100%;
+  width: 30%;
   padding: 10px;
   margin-bottom: 15px;
   border-style: solid;
   border-radius: 5px;
   border-width: 1px;
+  margin-left: 20px;
+  top: -70px;
 }
 
 .support-ticket-form button {
   display: block;
-  width: 100%;
-  padding: 15px;
-  background: #ff4081;
+  width: auto;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #B3A369, #9E8B50);
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 1em;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/*Adding code for Email button*/
+#email_button {
+  display: block;
+  width: auto;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #B3A369, #9E8B50);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 .support-ticket-form button:hover {
-  background: #e63670;
+  background: linear-gradient(135deg, #B3A369, #9E8B50);
 }
 
 /* Contact Section */
@@ -177,9 +201,8 @@ section {
 
 .contact a {
   display: inline-block;
-  margin-top: 20px;
   padding: 15px 30px;
-  background: #ff4081;
+  background: linear-gradient(135deg, #B3A369, #9E8B50);
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -187,7 +210,7 @@ section {
 }
 
 .contact a:hover {
-  background: #e63670;
+  background: linear-gradient(135deg, #B3A369, #9E8B50);
 }
 
 /* Footer */
@@ -217,8 +240,79 @@ footer {
 }
 
 .box {
-  border: 4px solid #f76707;
+  border: 4px solid red;
   border-radius: 5px;
   margin-left: 40px;
-  margin-top: 30px;
+  margin-top: 20px;
+  width: 1000px;
+}
+
+h3 {
+  margin-left: 10px;
+}
+
+/*Adding code for pop-up*/
+#closeModal {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  border: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 25px;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.open {
+  opacity: 1;
+  z-index: 999;
+}
+
+.modal-inner {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  padding: 15px 25px;
+  text-align: center;
+  width: 380px;
+}
+
+.modal-inner h2 {
+  margin: 0;
+}
+
+.modal-inner p {
+  line-height: 24px;
+  margin: 10px 0;
+}
+
+.bullet-list {
+  list-style-type: disc; /* Default bullet style */
+  padding-left: 50px; /* Adds space to the left of the list */
+  margin-top: -40px;
+  margin-bottom: 10px;
+}
+
+.bullet-list li {
+  color: black; /* Change text color */
+  font-size: 1.2em; /* Adjust font size */
+  padding-left: 0;
+  margin-left: 20px;
 }
