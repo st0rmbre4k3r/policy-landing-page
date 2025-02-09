@@ -1,2 +1,2 @@
 # policy-landing-page
-Landing page for policy course go phish assignment
+Landing page for Policy course for Go Phish assignment.
