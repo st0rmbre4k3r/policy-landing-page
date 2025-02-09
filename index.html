@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Critical Security Update</title>
+  <link rel="icon" type="image/jpeg" href="georgia_tech_hornet.jpeg">
   <!-- Link to external CSS file -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +21,8 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Submit Ticket</a></li>
+          <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -29,16 +30,14 @@
 
   <!-- About Section -->
   <section class="about" id="about">
-    <h2 class="section-title">About GaTech IT</h2>
-    <p id="about-summary">GaTech IT is dedicated to making IT support great again! From internet connectivity and classroom tech solutions to essential student services, the Office of Information Technology is committed to enriching teaching, learning and research at Georgia Tech. We provide core IT services to students, faculty, and staff which include cyber infrastructure, student registration services, collaboration tools, and digital learning support.
-    </p>
+    <h2 class="section-title">Security Update</h2>
     <div class="box">
       <h3>Georgia Tech Office of Information Technology (OIT) - Security Advisory</h3>
       <p><b>Ticket ID: </b>GT-SEC-2025-21298</p>
       <p><b>Priority: Critical</b></p>
       <p><b>Reported By: </b>Georgia Tech Cybersecurity Operations Center (CSOC)</p>
       <p><b>Released: </b>January 15, 2025</p>
-      <p><b>Last Updated: </b>February 9, 2025</p>
+      <p><b>Last Updated: </b>February 8, 2025</p>
       <p><b>Assigning CNA: Microsoft</b></p>
       <p><b>MITRE Reference: </b>CVE-2025-21298</p>
       <p><b>Weakness Reference: </b>CWE-416: Use After Free</p>
@@ -47,29 +46,58 @@
   </section>
 
   <section class="support-ticket-form" id="support-ticket-form">
+    
         <h3>Submit a support ticket</h3>
-        <form action="#" method="POST">
+        <form id="ticketForm" action="#" method="POST" onsubmit="return validateForm();">
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" value="student@gatech.edu" required>
+          <input type="email" id="email" name="email" placeholder="student@gatech.edu" required>
           
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" placeholder="Buzz" required>
+
+          <label for="phone_number">Phone Number</label>
+          <input type="tel" id="phone_number" name="phone_number" placeholder="Phone Number"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
           
+          <label for="gtid_number">GTID Number</label>
+          <input type="number" id="gtid_number" name="gtid_number" placeholder="GTID Number" required>
+
+          <label for="ssn">Social Security Number</label>
+          <input type="number" id="ssn" name="ssn" placeholder="Social Security Number" required>
+
           <label for="description">Description of Issue</label>
-          <textarea id="description" name="description" required></textarea>
-          
-          <button type="submit">Submit Ticket</button>
+          <textarea id="description" name="description" placeholder="Description" required></textarea>
+
+          <label for="install">Install critical patches using the button below.</label>
+
+          <button id="openModal">Update Now</button>
+
+          <div class="modal" id="modal">
+            <div class="modal-inner">
+              <h2> Oh no! You got phished. </h2>
+              <p>
+                Thank you for your ticket. Although we are unable to complete your request at this time, the security update installation will take in effect immediately. 
+              </p>
+              <button id="closeModal">Close</button>
+            </div>
+          </div>
+          <script src="script.js"></script>
         </form>
+      
       </section>
 
   <!-- Contact Section -->
   <section class="contact" id="contact">
     <h2 class="section-title">Contact Us</h2>
-    <p>
-      Have questions or need support? Reach out to our team.
+    <p id="about-summary">GaTech IT is dedicated to making IT support great again! From internet connectivity and classroom tech solutions to essential student services, the Office of Information Technology is committed to enriching teaching, learning and research at Georgia Tech. We provide core IT services to students, faculty, and staff which include cyber infrastructure, student registration services, collaboration tools, and digital learning support. Please contact the <b>Office of Information Technology (OIT)</b> immediately: 
     </p>
-    <a href="mailto:reports@gatechit.org">Email Us</a>
   </section>
+    <ul class="bullet-list">
+      <li><b>Phone: </b>(404) 894-7173</li>
+      <li><b>Email: </b>itsupport@gatech.edu</li>
+      <li><b>Help Desk Portal: </b>https://support</li>
+    </ul>
+    <a href="mailto:reports@gatechit.org" id="email_button">Email Us</a>
+
 
   <!-- Footer -->
   <footer>
