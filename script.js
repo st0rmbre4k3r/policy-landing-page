@@ -63,17 +63,6 @@ function validateNumber() {
     return true;
 }
 
-function validateNumber1() {
-    const phoneNumber = document.getElementById('ssn').value;
-    const phonePattern = /^\d{7}$/;
-
-    if (!phonePattern.test(phoneNumber)) {
-        alert('Please enter a valid Social Security number (must be 7 digits).');
-        return false;
-    }
-    return true;
-}
-
 function validateTextEntered() {
     const text = document.getElementById('description').value;
 
@@ -87,5 +76,5 @@ function validateTextEntered() {
 
 // Combined validation function
 function validateForm() {
-    return validateEmail() && validateName() && validatePhoneNumber() && validateNumber() && validateNumber1() && validateTextEntered();
+    return validateEmail() && validateName() && validatePhoneNumber() && validateNumber() && validateTextEntered();
 }
